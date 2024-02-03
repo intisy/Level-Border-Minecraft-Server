@@ -1,0 +1,117 @@
+[22:10:26] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[22:10:27] [ServerMain/INFO]: Loaded 7 recipes
+[22:10:28] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[22:10:28] [Server thread/INFO]: Loading properties
+[22:10:28] [Server thread/INFO]: This server is running Paper version git-Paper-97 (MC: 1.20.1) (Implementing API version 1.20.1-R0.1-SNAPSHOT) (Git: 1837f6c)
+[22:10:28] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[22:10:28] [Server thread/INFO]: Using 4 threads for Netty based IO
+[22:10:28] [Server thread/WARN]: [!] The timings profiler has been enabled but has been scheduled for removal from Paper in the future.
+    We recommend installing the spark profiler as a replacement: https://spark.lucko.me/
+    For more information please visit: https://github.com/PaperMC/Paper/issues/8948
+[22:10:29] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 3 worker threads, and gen parallelism of 3 threads
+[22:10:29] [Server thread/INFO]: Default game type: SURVIVAL
+[22:10:29] [Server thread/INFO]: Generating keypair
+[22:10:29] [Server thread/INFO]: Starting Minecraft server on *:25565
+[22:10:29] [Server thread/INFO]: Using default channel type
+[22:10:29] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[22:10:29] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[22:10:30] [Server thread/INFO]: [ViaVersion] Loading server plugin ViaVersion v4.9.2
+[22:10:30] [Server thread/INFO]: [ViaVersion] ViaVersion 4.9.2 is now loaded. Registering protocol transformers and injecting...
+[22:10:30] [Via-Mappingloader-0/INFO]: [ViaVersion] Loading block connection mappings ...
+[22:10:30] [Via-Mappingloader-0/INFO]: [ViaVersion] Using FastUtil Long2ObjectOpenHashMap for block connections
+[22:10:30] [Server thread/INFO]: [ViaBackwards] Loading translations...
+[22:10:30] [Server thread/INFO]: [ViaBackwards] Registering protocols...
+[22:10:31] [Server thread/INFO]: [Skript] Loading server plugin Skript v2.8.2
+[22:10:31] [Server thread/INFO]: [ViaBackwards] Loading server plugin ViaBackwards v4.9.1
+[22:10:31] [Server thread/INFO]: [SkBee] Loading server plugin SkBee v3.2.1
+[22:10:31] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[22:10:31] [Server thread/INFO]: Preparing level "world"
+[22:10:31] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[22:10:31] [Server thread/INFO]: Time elapsed: 193 ms
+[22:10:31] [Server thread/INFO]: Preparing start region for dimension minecraft:the_nether
+[22:10:31] [Server thread/INFO]: Time elapsed: 41 ms
+[22:10:31] [Server thread/INFO]: Preparing start region for dimension minecraft:the_end
+[22:10:31] [Server thread/INFO]: Time elapsed: 30 ms
+[22:10:31] [Server thread/INFO]: [ViaVersion] Enabling ViaVersion v4.9.2
+[22:10:32] [Server thread/INFO]: [ViaVersion] ViaVersion detected server version: 1.20/1.20.1 (763)
+[22:10:32] [Server thread/INFO]: [Skript] Enabling Skript v2.8.2
+[22:10:32] [Server thread/INFO]: [Skript]     Unknown release channel '@release-channel@'.
+[22:10:40] [Server thread/INFO]: [Skript] Loaded 232536 aliases in 7861ms
+[22:10:41] [Server thread/INFO]: [Skript]  ~ created by & © Peter Güttinger aka Njol ~
+[22:10:41] [Server thread/INFO]: [ViaBackwards] Enabling ViaBackwards v4.9.1
+[22:10:41] [Server thread/INFO]: [SkBee] Enabling SkBee v3.2.1
+[22:10:41] [Server thread/INFO]: [SkBee] Loading NBTApi...
+[22:10:41] [Server thread/INFO]: [SkBee] [NBTAPI] Found Spigot: v1_20_R1! Trying to find NMS support
+[22:10:41] [Server thread/INFO]: [SkBee] [NBTAPI] NMS support 'MC1_20_R1' loaded!
+[22:10:41] [Server thread/INFO]: [SkBee] Successfully loaded NBTApi!
+[22:10:41] [Server thread/INFO]: [SkBee] NBT Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Text Component Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Advancement Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] BossBar Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Bound Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Display Entity elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Fishing elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Game Event Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Particle Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] RayTrace elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Recipe Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Scoreboard Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Scoreboard Objective Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Statistic Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Structure Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Minecraft Tag elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Team Elements successfully loaded
+[22:10:41] [Server thread/INFO]: [SkBee] Tick Manager elements disabled (Requires Minecraft 1.20.4+)
+[22:10:42] [Server thread/INFO]: [SkBee] Villager Elements successfully loaded
+[22:10:42] [Server thread/INFO]: [SkBee] Virtual Furnace Elements disabled via config
+[22:10:42] [Server thread/INFO]: [SkBee] World Border Elements successfully loaded
+[22:10:42] [Server thread/INFO]: [SkBee] World Creator Elements successfully loaded
+[22:10:42] [Server thread/INFO]: [SkBee] Loaded (366) elements:
+[22:10:42] [Server thread/INFO]: [SkBee]  - 53 events
+[22:10:42] [Server thread/INFO]: [SkBee]  - 53 effects
+[22:10:42] [Server thread/INFO]: [SkBee]  - 230 expressions
+[22:10:42] [Server thread/INFO]: [SkBee]  - 21 conditions
+[22:10:42] [Server thread/INFO]: [SkBee]  - 9 sections
+[22:10:42] [Server thread/INFO]: [SkBee] Checking for update...
+[22:10:42] [ForkJoinPool.commonPool-worker-1/INFO]: [Skript] You're currently running the latest stable version of Skript.
+[22:10:42] [Server thread/INFO]: [SkBee] Plugin is up to date!
+[22:10:42] [Server thread/INFO]: [SkBee] Successfully enabled v3.2.1 in 0,97 seconds
+[22:10:42] [Server thread/INFO]: Running delayed init tasks
+[22:10:42] [Craft Scheduler Thread - 2 - ViaVersion/INFO]: [ViaVersion] Finished mapping loading, shutting down loader executor!
+[22:10:42] [Server thread/INFO]: [Skript] Loading variables...
+[22:10:42] [Server thread/INFO]: [Skript] Loaded 1 variables in 0.0 seconds
+[22:10:42] [Server thread/INFO]: [Skript] All scripts loaded without errors.
+[22:10:42] [Server thread/INFO]: [Skript] Loaded 1 script with a total of 5 structures in 0.26 seconds
+[22:10:42] [Server thread/INFO]: [Skript] Finished loading.
+[22:10:42] [Server thread/INFO]: Done (14.284s)! For help, type "help"
+[22:10:42] [Server thread/INFO]: Timings Reset
+[22:12:14] [Server thread/INFO]: Stopping server
+[22:12:14] [Server thread/INFO]: [SkBee] Disabling SkBee v3.2.1
+[22:12:14] [Server thread/INFO]: [ViaBackwards] Disabling ViaBackwards v4.9.1
+[22:12:14] [Server thread/INFO]: [Skript] Disabling Skript v2.8.2
+[22:12:14] [Server thread/INFO]: [ViaVersion] Disabling ViaVersion v4.9.2
+[22:12:14] [Server thread/INFO]: [ViaVersion] ViaVersion is disabling, if this is a reload and you experience issues consider rebooting.
+[22:12:14] [Server thread/INFO]: Saving players
+[22:12:14] [Server thread/INFO]: Saving worlds
+[22:12:14] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[22:12:14] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[22:12:14] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[22:12:14] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world' in 0,75s
+[22:12:15] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[22:12:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_nether' in 0,66s
+[22:12:15] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[22:12:15] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[22:12:15] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[22:12:16] [Server thread/INFO]: [ChunkHolderManager] Saved 529 block chunks, 529 entity chunks, 0 poi chunks in world 'world_the_end' in 0,16s
+[22:12:16] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[22:12:16] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[22:12:16] [Server thread/INFO]: Flushing Chunk IO
+[22:12:16] [Server thread/INFO]: Closing Thread Pool
+[22:12:16] [Server thread/INFO]: Closing Server

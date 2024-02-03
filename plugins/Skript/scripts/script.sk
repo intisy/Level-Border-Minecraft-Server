@@ -1,0 +1,29 @@
+# von finn
+on level change:
+    if {a}+0 is not player's level:
+        update(player's level+1)
+        loop all players:
+            send title "&b&lLEVEL UP!" with subtitle "&7[&a%{a}+0%&7] > [&a%player's level%&7]" to (loop-player) for 3 seconds with fadein 0 second and fade out 1 second
+            play sound "entity.ENDERDRAGON.GROWL" with volume 0.5 to loop-player
+    set {a} to player's level
+    set {b} to level progress of player
+    loop all players:
+        set loop-player's level to {a}+0
+        set loop-player's level progress to {b}+0
+on join:
+    set player's level to {a}+0
+    set player's level progress to {b}+0
+    update({a}+1)
+    while player is online:
+        send action bar "&6%{playtime.%uuid of player%}%" to player
+        wait 1 second
+        add 1 second to {playtime.%uuid of player%}
+on load:
+    set spawn of world "world" to location(0,0,0)
+on first join:
+    set {playtime.%uuid of player%} to 0 seconds
+    teleport player to highest block at location(0,0,0) ~ vector(-0.5, 1, -0.5)
+function update(level: number):
+    expand world border of world "world" to {_level}
+    expand world border of world "world_nether" to {_level}
+    expand world border of world "world_the_end" to {_level}
