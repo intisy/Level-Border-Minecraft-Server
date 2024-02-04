@@ -21,29 +21,13 @@ jobs:
 
       - name: Create Release
         run: gh release create ${{ github.ref_name }} -t "Release ${{ github.ref_name }}"
-        
-      - name: Create pack.mcmeta
-        run: |
-          echo '{
-            "pack": {
-              "pack_format": 13,
-              "description": "§7Author §f» §6WilderPizza\n§7Version §f» §7${{ github.ref_name }}"
-            }
-          }' > pack.mcmeta
 
       - name: Zip Project
         run: |
-          find . -type f -not -path './.git/*' -not -path './.github/*' -exec zip -r pack.zip {} +
-        
-      - name: Create hash.txt
-        run: |
-          echo "$(md5sum pack.zip | cut -d ' ' -f 1)" > hash.txt
-
-      - name: Upload hash.txt
-        run: gh release upload ${{ github.ref_name }} hash.txt
+          find . -type f -not -path './.git/*' -not -path './.github/*' -exec zip -r server.zip {} +
 
       - name: Upload Zip
-        run: gh release upload ${{ github.ref_name }} pack.zip
+        run: gh release upload ${{ github.ref_name }} server.zip
 
       - name: Delete Zip
-        run: rm pack.zip
+        run: rm server.zip
