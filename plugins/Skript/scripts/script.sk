@@ -20,6 +20,8 @@ on level change:
         update(loop-player, player's level+1)
         set loop-player's level to {a}+0
         set loop-player's level progress to {b}+0
+on death of player:
+    update(player, {a}+0)
 on damage:
     if {start} is not true:
         cancel event
