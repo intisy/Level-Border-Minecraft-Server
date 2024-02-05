@@ -31,9 +31,9 @@ on food bar change:
 on player respawn:
     wait 1 tick
     update(player, {a}+1)
-    pos(player)
+    pos(player, true)
 on player move:
-    pos(player)
+    pos(player, false)
 on join:
     set player's level to {a}+0
     set player's level progress to {b}+0
@@ -53,15 +53,26 @@ function timer(player: player):
         add 1 second to {playtime.%uuid of {_player}%}
 on player world change:
     update(player, {a}+1)
-function pos(player: player):
-    if x location of {_player} > {a}+0.7:
-        teleport {_player} to location({a}+0.7, y location of highest block at location of {_player}, z location of {_player})
-    if x location of {_player} < ({a}+0.7)*-1:
-        teleport {_player} to location(({a}+0.7)*-1, y location of highest block at location of {_player}, z location of {_player})
-    if y location of {_player} > {a}+0.7:
-        teleport {_player} to location(x location of {_player}, y location of highest block at location of {_player}, {a}+0.7)
-    if x location of {_player} < ({a}+0.7)*-1:
-        teleport {_player} to location(x location of {_player}, y location of highest block at location of {_player}, ({a}+0.7)*-1)
+function pos(player: player, top: boolean):
+    if {_top} is true:
+        set {_y} to y location of highest block at location of {_player}
+    else:
+        set {_y} to y location of {_player}
+    set {_w} to world of {_player}
+    set {_yaw} to yaw of {_player}
+    set {_p} to pitch of {_player}
+    if {_player}'s world is "world_nether":
+        set {_a} to ({a}+0.7)*4
+    else:
+        set {_a} to {a}+0.7
+    if x location of {_player} > {_a}:
+        teleport {_player} to location({_a}, {_y}, z location of {_player}, {_w}, {_yaw}, {_p})
+    if x location of {_player} < ({_a})*-1:
+        teleport {_player} to location(({_a})*-1, {_y}, z location of {_player}, {_w}, {_yaw}, {_p})
+    if z location of {_player} > {_a}:
+        teleport {_player} to location(x location of {_player}, {_y}, {_a}+0, {_w}, {_yaw}, {_p})
+    if z location of {_player} < ({_a})*-1:
+        teleport {_player} to location(x location of {_player}, {_y}, ({_a})*-1+0, {_w}, {_yaw}, {_p})
 function update(player: player, level: number):
     if {_player}'s world is "world_nether":
         set {_level} to {_level}*4
