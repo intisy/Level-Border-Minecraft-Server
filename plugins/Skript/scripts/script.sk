@@ -9,9 +9,9 @@ on level change:
         update(player's level+1)
         loop all players:
             if {a}+0 > player's level:
-                set {_s} to "DOWN"
-            else:
                 set {_s} to "UP"
+            else:
+                set {_s} to "DOWN"
             send title "&b&lLEVEL %{_s}%!" with subtitle "&7[&a%{a}+0%&7] > [&a%player's level%&7]" to (loop-player) for 3 seconds with fadein 0 second and fade out 1 second
             play sound "entity.ENDERDRAGON.GROWL" with volume 0.5 to loop-player
     set {a} to player's level

@@ -1,5 +1,5 @@
 :start
-title Bamboo Tycoon Lobby 1
+title Level Border Server
 @echo off
 color 7
 echo +----------------------------------------------------+
