@@ -21,13 +21,24 @@ on level change:
         set loop-player's level to {a}+0
         set loop-player's level progress to {b}+0
 on death of player:
-    update(player, {a}+0)
+    update(victim, {a}+1)
 on damage:
     if {start} is not true:
         cancel event
 on food bar change:
     if {start} is not true:
         cancel event
+on player respawn:
+    wait 1 tick
+    update(player, {a}+1)
+    if x location of player > {a}+0.7:
+        teleport player to location({a}+0.7, y location of highest block at location of player, z location of player)
+    if x location of player < ({a}+0.7)*-1:
+        teleport player to location(({a}+0.7)*-1, y location of highest block at location of player, z location of player)
+    if y location of player > {a}+0.7:
+        teleport player to location(x location of player, y location of highest block at location of player, {a}+0.7)
+    if x location of player < ({a}+0.7)*-1:
+        teleport player to location(x location of player, y location of highest block at location of player, ({a}+0.7)*-1)
 on join:
     set player's level to {a}+0
     set player's level progress to {b}+0
