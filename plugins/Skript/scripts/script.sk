@@ -5,7 +5,7 @@ command /start:
             set {start} to true
             loop all players:
                 timer(loop-player)
-on level change:
+on level progress change:
     if {a}+0 is not player's level:
         loop all players:
             if {a}+0 > player's level:
@@ -31,14 +31,9 @@ on food bar change:
 on player respawn:
     wait 1 tick
     update(player, {a}+1)
-    if x location of player > {a}+0.7:
-        teleport player to location({a}+0.7, y location of highest block at location of player, z location of player)
-    if x location of player < ({a}+0.7)*-1:
-        teleport player to location(({a}+0.7)*-1, y location of highest block at location of player, z location of player)
-    if y location of player > {a}+0.7:
-        teleport player to location(x location of player, y location of highest block at location of player, {a}+0.7)
-    if x location of player < ({a}+0.7)*-1:
-        teleport player to location(x location of player, y location of highest block at location of player, ({a}+0.7)*-1)
+    pos(player)
+on player move:
+    pos(player)
 on join:
     set player's level to {a}+0
     set player's level progress to {b}+0
@@ -58,6 +53,15 @@ function timer(player: player):
         add 1 second to {playtime.%uuid of {_player}%}
 on player world change:
     update(player, {a}+1)
+function pos(player: player):
+    if x location of player > {a}+0.7:
+        teleport player to location({a}+0.7, y location of highest block at location of player, z location of player)
+    if x location of player < ({a}+0.7)*-1:
+        teleport player to location(({a}+0.7)*-1, y location of highest block at location of player, z location of player)
+    if y location of player > {a}+0.7:
+        teleport player to location(x location of player, y location of highest block at location of player, {a}+0.7)
+    if x location of player < ({a}+0.7)*-1:
+        teleport player to location(x location of player, y location of highest block at location of player, ({a}+0.7)*-1)
 function update(player: player, level: number):
     if {_player}'s world is "world_nether":
         set {_level} to {_level}*4
