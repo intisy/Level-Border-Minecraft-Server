@@ -1,33 +1,38 @@
 # von finn
 command /start:
     trigger:
-        set {start} to true
-        loop all players:
-            timer(loop-player)
+        if {start} is not true:
+            set {start} to true
+            loop all players:
+                timer(loop-player)
 on level change:
     if {a}+0 is not player's level:
-        update(player's level+1)
         loop all players:
             if {a}+0 > player's level:
-                set {_s} to "UP"
-            else:
                 set {_s} to "DOWN"
+            else:
+                set {_s} to "UP"
             send title "&b&lLEVEL %{_s}%!" with subtitle "&7[&a%{a}+0%&7] > [&a%player's level%&7]" to (loop-player) for 3 seconds with fadein 0 second and fade out 1 second
             play sound "entity.ENDERDRAGON.GROWL" with volume 0.5 to loop-player
     set {a} to player's level
     set {b} to level progress of player
     loop all players:
+        update(loop-player, player's level+1)
         set loop-player's level to {a}+0
         set loop-player's level progress to {b}+0
 on damage:
     if {start} is not true:
         cancel event
+on food bar change:
+    if {start} is not true:
+        cancel event
 on join:
     set player's level to {a}+0
     set player's level progress to {b}+0
-    update({a}+1)
     if {start} is true:
         timer(player)
+    wait 1 ticks
+    update(player, {a}+1)
 on load:
     set spawn of world "world" to location(0,0,0)
 on first join:
@@ -38,7 +43,14 @@ function timer(player: player):
         send action bar "&6%{playtime.%uuid of {_player}%}%" to {_player}
         wait 1 second
         add 1 second to {playtime.%uuid of {_player}%}
-function update(level: number):
-    expand world border of world "world" to {_level}
-    expand world border of world "world_nether" to {_level}
-    expand world border of world "world_the_end" to {_level}
+on player world change:
+    update(player, {a}+1)
+function update(player: player, level: number):
+    if {_player}'s world is "world_nether":
+        set {_level} to {_level}*4
+    set world border of {_player} to virtual world border
+    set border center of world border of {_player} to location(0,0,0)
+    set size of world border of {_player} to {_level}
+    # expand world border of world "world" to {_level}
+    # expand world border of world "world_nether" to {_level}
+    # expand world border of world "world_the_end" to {_level}
