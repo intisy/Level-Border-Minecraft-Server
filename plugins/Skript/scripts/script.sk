@@ -19,6 +19,9 @@ on level change:
     loop all players:
         set loop-player's level to {a}+0
         set loop-player's level progress to {b}+0
+on damage:
+    if {start} is true:
+        cancel event
 on join:
     set player's level to {a}+0
     set player's level progress to {b}+0
