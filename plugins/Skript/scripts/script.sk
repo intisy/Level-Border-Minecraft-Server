@@ -54,14 +54,14 @@ function timer(player: player):
 on player world change:
     update(player, {a}+1)
 function pos(player: player):
-    if x location of player > {a}+0.7:
-        teleport player to location({a}+0.7, y location of highest block at location of player, z location of player)
-    if x location of player < ({a}+0.7)*-1:
-        teleport player to location(({a}+0.7)*-1, y location of highest block at location of player, z location of player)
-    if y location of player > {a}+0.7:
-        teleport player to location(x location of player, y location of highest block at location of player, {a}+0.7)
-    if x location of player < ({a}+0.7)*-1:
-        teleport player to location(x location of player, y location of highest block at location of player, ({a}+0.7)*-1)
+    if x location of {_player} > {a}+0.7:
+        teleport {_player} to location({a}+0.7, y location of highest block at location of {_player}, z location of {_player})
+    if x location of {_player} < ({a}+0.7)*-1:
+        teleport {_player} to location(({a}+0.7)*-1, y location of highest block at location of {_player}, z location of {_player})
+    if y location of {_player} > {a}+0.7:
+        teleport {_player} to location(x location of {_player}, y location of highest block at location of {_player}, {a}+0.7)
+    if x location of {_player} < ({a}+0.7)*-1:
+        teleport {_player} to location(x location of {_player}, y location of highest block at location of {_player}, ({a}+0.7)*-1)
 function update(player: player, level: number):
     if {_player}'s world is "world_nether":
         set {_level} to {_level}*4
